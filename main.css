@@ -71,9 +71,8 @@ body {
 }
 
 .expenses {
+
     max-width: 550px;
-
-
     margin: auto;
     display: flex;
     flex: 1;
@@ -107,7 +106,13 @@ body {
     background-color: var(--clr-pale-orange);
     color: var(--clr-dark-brown);
     border-radius: var(--border-radius);
-    padding: 20px 45px;
+    padding: 20px 10px;
+}
+
+@media (min-width: 500px) {
+    .spending-card {
+        padding: 20px 45px;
+    }
 }
 
 .spending-weekly-title {
@@ -118,8 +123,14 @@ body {
 .spending-weekly-figure {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 15px;
+    gap: 10px;
     aspect-ratio: 4/3;
+}
+
+@media (min-width: 500px) {
+    .spending-weekly-figure {
+        gap: 15px;
+    }
 }
 
 .chart-column {
@@ -145,7 +156,7 @@ body {
 .chart-value {
     /* background-color: var(--clr-med-brown); */
     border-radius: 4px;
-    min-width: 40px;
+    min-width: 30px;
     transition-property: height;
     transition-duration: 5s;
     position: relative;
